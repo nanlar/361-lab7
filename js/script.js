@@ -1,22 +1,15 @@
 function init(){
 // my javascrip code is below
- 
-	function myEventFunction(){
-	  alert("Nilufer Anlar:" + ebutton.value);
-	}
-        
-  var ebutton = document.getElementById('entrybutton');
-  var einp = document.getElementById('entryinput');
-		    
-	ebutton.addEventListener('click', myEventFunction);
-        
-	eb.addEventListener('click', function(){
-          
-  console.log('I was Clicked!');
-          
-  var txtoutp = document.getElementById("textoutput");
-  txtoutp.innerHTML = einp.value;
 
-});
+  var einp = document.getElementById("entryinput");
+  var ebutton = document.getElementById("entrybutton");
+  var txtoutp = document.getElementById("textoutput");
+	      
+	ebutton.addEventListener("click", function(){
+    alert("Nilufer Anlar:" + einp.value);
+    console.log("I was Clicked!");
+    txtoutp.innerHTML = einp.value;
+  });
+}
           
 window.addEventListener('load', init);
