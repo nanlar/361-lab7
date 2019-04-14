@@ -1,17 +1,15 @@
 function init(){
 // my javascrip code is below
-
-// get the element ids first
-  var einp = document.getElementById("entryinput");
-  var ebutton = document.getElementById("entrybutton");
-  var txtoutp = document.getElementById("textoutput");
-	
-  // do the requested actions inside a function
-	ebutton.addEventListener("click", function(){
+  function myEventFunction(){
+    var einp = document.getElementById("entryinput");
     alert("Nilufer Anlar: " + einp.value);
-    console.log("I was Clicked!");
+    var txtoutp = document.getElementById("textoutput");
     txtoutp.innerHTML = einp.value;
-  });
+	}
+
+  var ebutton = document.getElementById("entrybutton");
+  // do the requested actions inside my function
+	ebutton.addEventListener("click", myEventFunction);
 }
           
 window.addEventListener('load', init);
